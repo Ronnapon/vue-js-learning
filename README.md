@@ -8,13 +8,13 @@ VS Code (Extension)
 - Vetur 
 
 Command Line
-node -v (node version)
-vue -ui (open vue for create project)
-code . (open vscode)
+- node -v (node version)
+- vue -ui (open vue for create project)
+- code . (open vscode)
 
 Open and Close Project (Run on Terminal) Tools > New Terminal in VS Code
-npm run serve 
-control + c 
+- npm run serve 
+- control + c 
 
 
 Progressive Js Framework View เป็นส่วนเสริมให้ HTML
