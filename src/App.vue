@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <input type="text" v-model="message" />
+    {{ message }}
+    <div v-if="show == true">Vue.js.EP1</div>
+    <div v-else>Vue.js EP2</div>
+    <!-- valiable, index -->
+    <div v-for="(animal, i) in animals" :key="i">
+      {{ animal }}
+    </div>
+    <button v-on:click="submit()">click</button>
+    {{ message }}
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  data() {
+    return {
+      message: "",
+      show: true,
+      animals: ["cat", "dog", "ant"],
+    };
+  },
+  methods: {
+    submit() {
+      this.message = "Make Web Bkk";
+      //console.log("Make Web BigThaiFlute");
+    },
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
 </style>
